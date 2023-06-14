@@ -2,6 +2,7 @@
   "name": "@red-asuka/vitepress-plugin-tabs",
   "type": "module",
   "version": "0.0.1",
+  "private": false,
   "description": "VitePress plugin - markdown custom container to display content in tabs",
   "author": "Red-Asuka",
   "license": "MIT",
