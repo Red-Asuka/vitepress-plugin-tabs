@@ -1,5 +1,6 @@
 {
   "name": "vitepress-plugin-tabs",
+  "type": "module",
   "version": "0.0.1",
   "description": "VitePress plugin - markdown custom container to display content in tabs",
   "author": "Red-Asuka",
@@ -41,10 +42,15 @@
     "test": "vitest",
     "typecheck": "tsc --noEmit"
   },
+  "dependencies": {
+    "markdown-it": "^13.0.1",
+    "markdown-it-container": "^3.0.0"
+  },
   "devDependencies": {
     "@antfu/eslint-config": "^0.39.4",
     "@antfu/ni": "^0.21.3",
     "@antfu/utils": "^0.7.4",
+    "@types/markdown-it": "^12.2.3",
     "@types/node": "^18.16.16",
     "bumpp": "^9.1.0",
     "eslint": "^8.41.0",

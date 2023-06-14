@@ -1,3 +1,4 @@
+import fs from 'node:fs'
 import { defineBuildConfig } from 'unbuild'
 
 export default defineBuildConfig({
@@ -8,5 +9,10 @@ export default defineBuildConfig({
   clean: true,
   rollup: {
     emitCJS: true,
+  },
+  hooks: {
+    'mkdist:done': () => {
+      fs.copyFileSync('./src/style.css', './dist/style.css')
+    },
   },
 })
