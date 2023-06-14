@@ -1,0 +1,67 @@
+{
+  "name": "vitepress-plugin-tabs",
+  "version": "0.0.1",
+  "description": "VitePress plugin - markdown custom container to display content in tabs",
+  "author": "Red-Asuka",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Red-Asuka/vitepress-plugin-tabs.git"
+  },
+  "bugs": "https://github.com/Red-Asuka/vitepress-plugin-tabs/issues",
+  "keywords": [
+    "vitepress",
+    "vuepress",
+    "plugin",
+    "tabs",
+    "tab"
+  ],
+  "sideEffects": false,
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist/*",
+        "./dist/index.d.ts"
+      ]
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "unbuild",
+    "dev": "unbuild --stub",
+    "lint": "eslint .",
+    "prepublishOnly": "nr build",
+    "release": "bumpp && npm publish",
+    "start": "esno src/index.ts",
+    "test": "vitest",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^0.39.4",
+    "@antfu/ni": "^0.21.3",
+    "@antfu/utils": "^0.7.4",
+    "@types/node": "^18.16.16",
+    "bumpp": "^9.1.0",
+    "eslint": "^8.41.0",
+    "esno": "^0.16.3",
+    "lint-staged": "^13.2.2",
+    "pnpm": "^8.6.0",
+    "rimraf": "^5.0.1",
+    "simple-git-hooks": "^2.8.1",
+    "typescript": "^5.0.4",
+    "unbuild": "^1.2.1",
+    "vite": "^4.3.9",
+    "vitest": "^0.31.3"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged"
+  },
+  "lint-staged": {
+    "*": "eslint --fix"
+  }
+}
