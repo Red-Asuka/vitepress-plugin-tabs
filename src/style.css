@@ -29,8 +29,6 @@
   display: flex;
   align-items: center;
   padding: 8px 20px;
-}
-.tabs-component .tabs-component-tabs .tabs-component-tab .tabs-component-tab-a:hover {
   text-decoration: none;
 }
 .tabs-component .tabs-component-panels {
