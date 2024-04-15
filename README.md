@@ -55,7 +55,7 @@ export default {
 }
 ```
 
-If you don't need to customize the style of the tabs, you can directly use the default style provided by `vitepress-plugin-tabs`. You only need to add the following code in `.vitepress/config.ts`:
+If you don't need to customize the style of the tabs, you can directly use the default style provided by `vitepress-plugin-tabs`. You only need to add the following code in `.vitepress/theme/index.ts`:
 
 ```ts
 import '@red-asuka/vitepress-plugin-tabs/dist/style.css'
