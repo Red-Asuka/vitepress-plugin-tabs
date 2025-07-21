@@ -44,16 +44,20 @@ export default {
 Register component in `.vitepress/theme/index.ts`:
 
 ```ts
+import { h } from 'vue';
 import { Tab, Tabs } from 'vue3-tabs-component'
 
 export default {
   // ...
   enhanceApp({ app }) {
     app.component('Tab', Tab)
-    app.component('Tabs', Tabs)
+    app.component('Tabs', (props, ctx) =>
+      h(Tabs, { navClass: 'tabs-component-tabs vp-raw', ...ctx.attrs, ...props }, ctx.slots));
   }
 }
 ```
+
+Note that the class `vp-raw` is added to the `navClass` prop to prevent Markdown styling of elements inside the tab bar.
 
 If you don't need to customize the style of the tabs, you can directly use the default style provided by `vitepress-plugin-tabs`. You only need to add the following code in `.vitepress/theme/index.ts`:
 
